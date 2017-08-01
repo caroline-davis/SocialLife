@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FacebookLogin
+import FacebookCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
