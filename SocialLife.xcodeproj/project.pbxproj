@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6619AE2DD3459F8563F8095F /* Pods_SocialLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7347FF71E55DD286269FC063 /* Pods_SocialLife.framework */; };
+		F11107BD1F3048280037344B /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11107BC1F3048280037344B /* FancyView.swift */; };
+		F11107C01F3049F60037344B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11107BF1F3049F60037344B /* Constants.swift */; };
+		F11107C21F304BBC0037344B /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11107C11F304BBC0037344B /* RoundButton.swift */; };
+		F11107C41F304CED0037344B /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11107C31F304CED0037344B /* FancyField.swift */; };
+		F11107C61F304DDC0037344B /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11107C51F304DDC0037344B /* FancyButton.swift */; };
 		F123B4A11F2F08B4004AF41E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123B4A01F2F08B4004AF41E /* AppDelegate.swift */; };
 		F123B4A31F2F08B4004AF41E /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123B4A21F2F08B4004AF41E /* SignInVC.swift */; };
 		F123B4A61F2F08B4004AF41E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F123B4A41F2F08B4004AF41E /* Main.storyboard */; };
@@ -20,6 +25,11 @@
 		39D5D542FBAF5B3363FDCAB2 /* Pods-SocialLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialLife/Pods-SocialLife.debug.xcconfig"; sourceTree = "<group>"; };
 		7347FF71E55DD286269FC063 /* Pods_SocialLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB081459F680236C14B6CDA /* Pods-SocialLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialLife.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialLife/Pods-SocialLife.release.xcconfig"; sourceTree = "<group>"; };
+		F11107BC1F3048280037344B /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		F11107BF1F3049F60037344B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F11107C11F304BBC0037344B /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		F11107C31F304CED0037344B /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
+		F11107C51F304DDC0037344B /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 		F123B49D1F2F08B4004AF41E /* SocialLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F123B4A01F2F08B4004AF41E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F123B4A21F2F08B4004AF41E /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInVC.swift; path = SocialLife/SignInVC.swift; sourceTree = "<group>"; };
@@ -59,6 +69,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F11107BE1F3049EB0037344B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F11107BF1F3049F60037344B /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		F123B4941F2F08B4004AF41E = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +98,7 @@
 		F123B49F1F2F08B4004AF41E /* SocialLife */ = {
 			isa = PBXGroup;
 			children = (
+				F11107BE1F3049EB0037344B /* Util */,
 				F1A7D38C1F2F0E150020F45D /* Controller */,
 				F1A7D38B1F2F0E100020F45D /* View */,
 				F1A7D38A1F2F0E080020F45D /* Model */,
@@ -104,6 +123,10 @@
 		F1A7D38B1F2F0E100020F45D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F11107BC1F3048280037344B /* FancyView.swift */,
+				F11107C31F304CED0037344B /* FancyField.swift */,
+				F11107C11F304BBC0037344B /* RoundButton.swift */,
+				F11107C51F304DDC0037344B /* FancyButton.swift */,
 			);
 			name = View;
 			path = ..;
@@ -243,8 +266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11107C41F304CED0037344B /* FancyField.swift in Sources */,
 				F123B4A31F2F08B4004AF41E /* SignInVC.swift in Sources */,
+				F11107C21F304BBC0037344B /* RoundButton.swift in Sources */,
+				F11107C61F304DDC0037344B /* FancyButton.swift in Sources */,
 				F123B4A11F2F08B4004AF41E /* AppDelegate.swift in Sources */,
+				F11107BD1F3048280037344B /* FancyView.swift in Sources */,
+				F11107C01F3049F60037344B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
