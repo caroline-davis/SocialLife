@@ -38,6 +38,7 @@
 		F123B4AA1F2F08B4004AF41E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F123B4AC1F2F08B4004AF41E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F123B4B21F2F09BC004AF41E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F1CFF8091F32E2FE00DD828C /* SocialLife.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialLife.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 		F123B49F1F2F08B4004AF41E /* SocialLife */ = {
 			isa = PBXGroup;
 			children = (
+				F1CFF8091F32E2FE00DD828C /* SocialLife.entitlements */,
 				F11107BE1F3049EB0037344B /* Util */,
 				F1A7D38C1F2F0E150020F45D /* Controller */,
 				F1A7D38B1F2F0E100020F45D /* View */,
@@ -178,6 +180,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 2UNXUT4D3C;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -398,6 +405,7 @@
 			baseConfigurationReference = 39D5D542FBAF5B3363FDCAB2 /* Pods-SocialLife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialLife/SocialLife.entitlements;
 				DEVELOPMENT_TEAM = 2UNXUT4D3C;
 				INFOPLIST_FILE = SocialLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -412,6 +420,7 @@
 			baseConfigurationReference = 8AB081459F680236C14B6CDA /* Pods-SocialLife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialLife/SocialLife.entitlements;
 				DEVELOPMENT_TEAM = 2UNXUT4D3C;
 				INFOPLIST_FILE = SocialLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
