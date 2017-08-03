@@ -13,6 +13,9 @@ import FacebookLogin
 
 class SignInVC: UIViewController {
 
+    @IBOutlet weak var pwdField: FancyField!
+    @IBOutlet weak var emailField: FancyField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,6 +24,24 @@ class SignInVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func signInTapped(_ sender: AnyObject) {
+        if let email = emailField.text, let pwd = pwdField.text {
+            Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if error == nil {
+                    print("CAROL: Email User authenticated with Firebase")
+                } else {
+                    Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                        if error != nil {
+                            print("CAROL: Unable to authenticate with Firebase using email: \(error) ")
+                        } else {
+                            print("CAROL Successfully authenticated with Firebase using email")
+                        }
+                        
+                    })
+                }
+            })
+        }
     }
 
     @IBAction func fbButtonTapped(_ sender: AnyObject) {
