@@ -13,6 +13,7 @@ target 'SocialLife' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare'
+  pod 'SwiftKeychainWrapper'
 
 
 end

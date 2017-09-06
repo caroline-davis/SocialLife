@@ -19,6 +19,7 @@
 		F123B4A81F2F08B4004AF41E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F123B4A71F2F08B4004AF41E /* Assets.xcassets */; };
 		F123B4AB1F2F08B4004AF41E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F123B4A91F2F08B4004AF41E /* LaunchScreen.storyboard */; };
 		F123B4B31F2F09BC004AF41E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F123B4B21F2F09BC004AF41E /* GoogleService-Info.plist */; };
+		F154B7431F5FB7E300601DC2 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F154B7421F5FB7E300601DC2 /* FeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F123B4AA1F2F08B4004AF41E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F123B4AC1F2F08B4004AF41E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F123B4B21F2F09BC004AF41E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F154B7421F5FB7E300601DC2 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		F1CFF8091F32E2FE00DD828C /* SocialLife.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialLife.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				F123B4A21F2F08B4004AF41E /* SignInVC.swift */,
+				F154B7421F5FB7E300601DC2 /* FeedVC.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11107C41F304CED0037344B /* FancyField.swift in Sources */,
+				F154B7431F5FB7E300601DC2 /* FeedVC.swift in Sources */,
 				F123B4A31F2F08B4004AF41E /* SignInVC.swift in Sources */,
 				F11107C21F304BBC0037344B /* RoundButton.swift in Sources */,
 				F11107C61F304DDC0037344B /* FancyButton.swift in Sources */,
