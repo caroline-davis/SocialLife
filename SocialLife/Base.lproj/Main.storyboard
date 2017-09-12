@@ -192,28 +192,28 @@
                                     <constraint firstAttribute="height" constant="65" id="mUn-UT-nDa"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="336" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Me-xu-iWU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="336" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Me-xu-iWU">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="336" id="3EH-pF-8lZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="336" id="3EH-pF-8lZ" customClass="PostCell" customModule="SocialLife" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="336"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3EH-pF-8lZ" id="byg-bN-TMs">
-                                            <frame key="frameInset" width="375" height="335"/>
+                                            <frame key="frameInset" width="375" height="336"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xC6-NP-rei" customClass="FancyView" customModule="SocialLife" customModuleProvider="target">
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01P-WB-ylB">
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="O2F-3X-uCR">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="O2F-3X-uCR" customClass="CircleView" customModule="SocialLife" customModuleProvider="target">
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="60" id="S6h-H3-ZEA"/>
                                                                         <constraint firstAttribute="height" constant="60" id="x32-f9-cNs"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xc-Pe-ZbR">
-                                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monkeyjelly85" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xc-Pe-ZbR">
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                                                     <color key="textColor" red="0.5902492506" green="0.1607679249" blue="0.40991962980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -235,18 +235,14 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NWD-rx-l2U">
-                                                            <frame key="frameInset" minX="264" minY="281" width="71" height="22"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NWD-rx-l2U">
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sch-Ee-4Nn">
-                                                                    <frame key="frameInset" width="37" height="22"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sch-Ee-4Nn">
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="898" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgj-OS-ZaR">
-                                                                    <frame key="frameInset" minX="42" width="29" height="22"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="898" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgj-OS-ZaR" userLabel="LikesLbl">
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -257,7 +253,9 @@
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="WiF-QG-YMj" firstAttribute="top" secondItem="01P-WB-ylB" secondAttribute="bottom" constant="8" id="3cw-8N-dUP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="NWD-rx-l2U" secondAttribute="bottom" constant="8" id="KQ8-WY-wk4"/>
                                                         <constraint firstAttribute="bottom" secondItem="WiF-QG-YMj" secondAttribute="bottom" constant="40" id="R3F-DR-wzu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="NWD-rx-l2U" secondAttribute="trailing" constant="8" id="Tt3-sV-CyY"/>
                                                         <constraint firstItem="01P-WB-ylB" firstAttribute="leading" secondItem="xC6-NP-rei" secondAttribute="leading" constant="8" id="aD1-7F-Sk9"/>
                                                         <constraint firstItem="01P-WB-ylB" firstAttribute="top" secondItem="xC6-NP-rei" secondAttribute="top" constant="8" id="ax1-z0-3FZ"/>
                                                         <constraint firstAttribute="trailing" secondItem="WiF-QG-YMj" secondAttribute="trailing" constant="8" id="cRv-W2-CqO"/>
@@ -266,6 +264,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="xC6-NP-rei" secondAttribute="bottom" constant="16" id="Ayo-EY-NL5"/>
                                                 <constraint firstItem="xC6-NP-rei" firstAttribute="top" secondItem="byg-bN-TMs" secondAttribute="top" constant="16" id="Wf4-0N-M6G"/>
@@ -273,13 +272,20 @@
                                                 <constraint firstAttribute="trailing" secondItem="xC6-NP-rei" secondAttribute="trailing" constant="16" id="nqL-fY-UqQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caption" destination="Srg-Bu-5jm" id="mHA-Xn-UxI"/>
+                                            <outlet property="likesLbl" destination="lgj-OS-ZaR" id="GKu-0V-PAI"/>
+                                            <outlet property="postImg" destination="WiF-QG-YMj" id="C5u-9f-vn0"/>
+                                            <outlet property="profileImg" destination="O2F-3X-uCR" id="VSM-e1-ozS"/>
+                                            <outlet property="userName" destination="7Xc-Pe-ZbR" id="qJP-3b-msh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6Me-xu-iWU" firstAttribute="top" secondItem="vS0-kh-UoM" secondAttribute="bottom" constant="16" id="1dY-vP-W6E"/>
+                            <constraint firstItem="6Me-xu-iWU" firstAttribute="top" secondItem="vS0-kh-UoM" secondAttribute="bottom" constant="8" id="1dY-vP-W6E"/>
                             <constraint firstAttribute="trailing" secondItem="6Me-xu-iWU" secondAttribute="trailing" id="CKX-RE-yXB"/>
                             <constraint firstItem="tc4-ac-vAr" firstAttribute="top" secondItem="6Me-xu-iWU" secondAttribute="bottom" id="Tft-wH-Rpk"/>
                             <constraint firstItem="vS0-kh-UoM" firstAttribute="trailing" secondItem="Hji-4A-RqW" secondAttribute="trailingMargin" id="ePf-oX-Vpe"/>
@@ -292,6 +298,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="6Me-xu-iWU" id="HZ9-hg-CR3"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="XbH-f2-u83"/>
                     </connections>
                 </viewController>
