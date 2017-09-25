@@ -12,16 +12,24 @@ import Firebase
 // this contains the URL of the root of the database (this is taken from GoogleService.plist file)
 let DB_BASE = Database.database().reference()
 
+let STORAGE_BASE = Storage.storage().reference()
+
 class DataService {
     
     static let ds = DataService()
     
+    // DB refereneces
     private var _REF_BASE = DB_BASE
     // (this is one child down from the main database ref on firebase database)
     private var _REF_POSTS = DB_BASE.child("posts")
     private var _REF_USERS = DB_BASE.child("users")
     
-    // the globally accessible vars
+    // Storage references
+    // (post pics is the folder name
+    private var _REF_POST_IMAGES = STORAGE_BASE.child("post-pics")
+    
+    
+    // the globally accessible vars computed properties
     var REF_BASE: DatabaseReference {
         return _REF_BASE
     }
@@ -30,6 +38,9 @@ class DataService {
     }
     var REF_USERS: DatabaseReference {
         return _REF_USERS
+    }
+    var REF_POST_IMAGES: StorageReference {
+        return _REF_POST_IMAGES
     }
     
     
