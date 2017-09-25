@@ -10,19 +10,26 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var signOut: UIButton!
+    @IBOutlet weak var imageAdd: CircleView!
     
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        // makes it so the user can move the image to the square they want it cropped at
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
         
         //**** the listener for changes in the firebase db ****
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
@@ -68,7 +75,22 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
-
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            imageAdd.image = image
+        } else {
+            print("CAROL: A valid image wasnt selected")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+ 
+    
+    @IBAction func addImageTapped(_ sender: AnyObject) {
+        present(imagePicker, animated: true, completion: nil)
+        
+    }
     @IBAction func signInTapped(_ sender: AnyObject) {
         
         // remove saved user id key
