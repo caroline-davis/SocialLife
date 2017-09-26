@@ -16,10 +16,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
 
     @IBOutlet weak var signOut: UIButton!
     @IBOutlet weak var imageAdd: CircleView!
+    @IBOutlet weak var captionField: FancyField!
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    var imageSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +89,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             imageAdd.image = image
+            imageSelected = true
         } else {
             print("CAROL: A valid image wasnt selected")
         }
@@ -98,6 +101,40 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         present(imagePicker, animated: true, completion: nil)
         
     }
+    
+    @IBAction func postBtnTapped(_ sender: AnyObject) {
+        guard let caption = captionField.text, caption != "" else {
+            print("CAROL: Caption must be entered")
+            return
+        }
+        guard let img = imageAdd.image, imageSelected == true else {
+            print("CAROL: An image must be selected")
+            return
+        }
+        
+        // uploading of the image and compressing it
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            
+            // the unique id
+            let imgUid = NSUUID().uuidString
+            
+            // safety to tell code what type of file the img is
+            let metaData = StorageMetadata()
+            metaData.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imgUid).putData(imgData, metadata: metaData) { (metaData, error) in
+                if error != nil {
+                    print("CAROL: Unable to upload image to firebase storage")
+                } else {
+                    print("CAROL: Successfully uploaded image to firebase storage")
+                    let downloadUrl = metaData?.downloadURL()?.absoluteString
+                }
+            }
+        }
+        
+    }
+    
+    
     @IBAction func signInTapped(_ sender: AnyObject) {
         
         // remove saved user id key
