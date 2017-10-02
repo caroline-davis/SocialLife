@@ -12,11 +12,10 @@ import SwiftKeychainWrapper
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet weak var tableView: UITableView!
-
-    @IBOutlet weak var signOut: UIButton!
     @IBOutlet weak var imageAdd: CircleView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var captionField: FancyField!
+   
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
@@ -38,16 +37,22 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             print("CAROL: \(snapshot.value)")
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                
+                // A posts array in closure
+                var posts = [Post]()
+                
                 for snap in snapshot {
                     print("SNAP: \(snap)")
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
-                        self.posts.append(post)
+                        posts.append(post)
                     }
                 }
+                self.posts = posts
+                self.tableView.reloadData()
             }
-            self.tableView.reloadData()
+    
         })
         
     }

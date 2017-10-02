@@ -49,14 +49,6 @@
                                     <constraint firstAttribute="bottom" secondItem="6U9-JL-wya" secondAttribute="bottom" constant="8" id="phi-NE-xNp"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a sign in method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEV-19-WaR">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="xvJ-Lj-tCZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzL-7e-am2" customClass="RoundButton" customModule="SocialLife" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.17254901960784313" green="0.2627450980392157" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -92,6 +84,14 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a sign in method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEV-19-WaR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="xvJ-Lj-tCZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -285,6 +285,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="Srg-Bu-5jm" id="mHA-Xn-UxI"/>
+                                            <outlet property="likeImg" destination="8y6-ox-1b2" id="jKU-pQ-70z"/>
                                             <outlet property="likesLbl" destination="lgj-OS-ZaR" id="GKu-0V-PAI"/>
                                             <outlet property="postImg" destination="WiF-QG-YMj" id="C5u-9f-vn0"/>
                                             <outlet property="profileImg" destination="O2F-3X-uCR" id="VSM-e1-ozS"/>
