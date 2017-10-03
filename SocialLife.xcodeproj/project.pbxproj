@@ -20,6 +20,7 @@
 		F123B4AB1F2F08B4004AF41E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F123B4A91F2F08B4004AF41E /* LaunchScreen.storyboard */; };
 		F123B4B31F2F09BC004AF41E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F123B4B21F2F09BC004AF41E /* GoogleService-Info.plist */; };
 		F1336AFD1F6A60CF00542FDC /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1336AFC1F6A60CF00542FDC /* DataService.swift */; };
+		F14320301F83547F00B69F29 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F143202F1F83547F00B69F29 /* UserVC.swift */; };
 		F154B7431F5FB7E300601DC2 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F154B7421F5FB7E300601DC2 /* FeedVC.swift */; };
 		F16B07FF1F6FA05D0035D324 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16B07FE1F6FA05D0035D324 /* Post.swift */; };
 		F1781A0C1F679C6800000CCB /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1781A0B1F679C6800000CCB /* PostCell.swift */; };
@@ -44,6 +45,7 @@
 		F123B4AC1F2F08B4004AF41E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F123B4B21F2F09BC004AF41E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F1336AFC1F6A60CF00542FDC /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		F143202F1F83547F00B69F29 /* UserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		F154B7421F5FB7E300601DC2 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		F16B07FE1F6FA05D0035D324 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F1781A0B1F679C6800000CCB /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			children = (
 				F123B4A21F2F08B4004AF41E /* SignInVC.swift */,
 				F154B7421F5FB7E300601DC2 /* FeedVC.swift */,
+				F143202F1F83547F00B69F29 /* UserVC.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -306,6 +309,7 @@
 				F11107C61F304DDC0037344B /* FancyButton.swift in Sources */,
 				F123B4A11F2F08B4004AF41E /* AppDelegate.swift in Sources */,
 				F11107BD1F3048280037344B /* FancyView.swift in Sources */,
+				F14320301F83547F00B69F29 /* UserVC.swift in Sources */,
 				F11107C01F3049F60037344B /* Constants.swift in Sources */,
 				F1781A0C1F679C6800000CCB /* PostCell.swift in Sources */,
 			);

@@ -19,7 +19,7 @@ class DataService {
     
     static let ds = DataService()
     
-    // DB refereneces
+    // DB references
     private var _REF_BASE = DB_BASE
     // (this is one child down from the main database ref on firebase database)
     private var _REF_POSTS = DB_BASE.child("posts")
