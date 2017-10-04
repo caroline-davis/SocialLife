@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rbJ-sW-tcH">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -367,6 +367,7 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="UgM-Xm-2nZ"/>
                                     <constraint firstItem="duE-ex-pz6" firstAttribute="leading" secondItem="S2H-eL-ea3" secondAttribute="leading" constant="15" id="m1L-U7-TAP"/>
@@ -374,6 +375,9 @@
                                     <constraint firstItem="bp5-iX-xuz" firstAttribute="centerX" secondItem="S2H-eL-ea3" secondAttribute="centerX" id="xkX-bf-FUA"/>
                                     <constraint firstItem="bp5-iX-xuz" firstAttribute="centerY" secondItem="duE-ex-pz6" secondAttribute="centerY" id="y0N-FC-4ko"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LE2-kN-yRo" appends="YES" id="tyw-RA-eW4"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select a profile image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIm-Xh-mmf">
                                 <color key="backgroundColor" red="0.5902492506" green="0.1607679249" blue="0.40991962980000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -400,6 +404,9 @@
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="0.44705882349999998" green="0.2156862745" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addProfilePic:" destination="rbJ-sW-tcH" eventType="touchUpInside" id="ec2-oz-J5s"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -419,8 +426,16 @@
                             <constraint firstAttribute="trailingMargin" secondItem="mQc-zX-4rY" secondAttribute="trailing" constant="15" id="yWH-Mu-qD3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userName" destination="mQc-zX-4rY" id="BsY-2a-EU6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68a-HU-3JB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LE2-kN-yRo">
+                    <connections>
+                        <action selector="signInTapped:" destination="rbJ-sW-tcH" id="R7C-dr-aMj"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1557.5999999999999" y="102.99850074962519"/>
         </scene>

@@ -30,6 +30,8 @@ class DataService {
     // (post pics is the folder name
     private var _REF_POST_IMAGES = STORAGE_BASE.child("post-pics")
     
+    private var _REF_POST_PROFILE_PICS = STORAGE_BASE.child("profile-pics")
+    
     
     // the globally accessible vars computed properties
     var REF_BASE: DatabaseReference {
@@ -48,6 +50,9 @@ class DataService {
     }
     var REF_POST_IMAGES: StorageReference {
         return _REF_POST_IMAGES
+    }
+    var REF_POST_PROFILE_PICS: StorageReference {
+        return _REF_POST_PROFILE_PICS
     }
         
     
